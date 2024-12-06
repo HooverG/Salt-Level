@@ -152,3 +152,10 @@ Ensure the following secrets are defined in your ESPHome secrets file:
 ---
 
 Enjoy your automated salt level monitoring system.
+
+
+## To-Do List
+
+- Replace ESP8266 with an ESP32 (consider using an ESP32-C3 Supermini).
+- Implement deep sleep mode to conserve power between measurements.
+- Wake up the system using the momentary push button.
