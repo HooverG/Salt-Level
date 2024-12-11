@@ -93,6 +93,13 @@ binary_sensor:
       then:
         - component.update: vl53l0x_sensor
         - logger.log: Button pressed
+    on_double_click:
+      min_length: 50ms
+      max_length: 350ms
+      then:
+        - logger.log: Button double click
+        - button.press: restart_button
+        
 
 button:
   - platform: template
@@ -102,6 +109,7 @@ button:
         - component.update: vl53l0x_sensor
 
   - platform: restart
+    id: restart_button
     name: Restart ${friendly_name}
 
 output:
